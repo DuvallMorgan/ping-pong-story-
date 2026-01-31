@@ -1,1 +1,2 @@
 # ping-pong-story-
+"The neon hum of the city flickered as the first 'MotionFrame' prototype blinked to life, casting a cubist shadow of a man in a black leather jacket against the rain-slicked pavement."
