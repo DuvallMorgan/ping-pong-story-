@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotionFrame | v3.3 Obsidian Void</title>
+  <meta name="description"
+    content="MotionFrame: The future of Text-to-Motion. Cinematic Strike-Team intelligence meets high-ROI performance diagnostics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Background Canvas for Picasso-Bleed -->
+  <canvas id="picasso-canvas"></canvas>
+
+  <div id="app">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">💠</span>
+        <h1>MOTIONFRAME</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#hero">Mission</a>
+        <a href="#gadgets">Gadgets</a>
+        <a href="#oss-console">Dashboard</a>
+        <a href="#training-sim">Muscle Lab</a>
+      </nav>
+      <div class="header-actions">
+        <div id="clearance-level">
+          <span class="label">CLEARANCE:</span>
+          <span class="level" id="user-clearance">GUEST_AGENT</span>
+        </div>
+        <button id="auth-google" class="btn-sm gold">OSS SIGN-IN</button>
+        <button id="toggle-cinematic" class="btn-icon" title="Cinematic Mode">👁️</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="reveal">
+        <div class="glass-card main-vision">
+          <div class="badge">MISSION: SPY KIDS PROTOCOL</div>
+          <h2>Level Up Your <br><span class="gradient-text">OSS Clearance</span></h2>
+          <p>The ultimate Gadget Hub for the next-gen Agent. High-ROI logic gates meeting cinematic physics.</p>
+          <div class="cta-group">
+            <button class="btn-primary"
+              onclick="document.getElementById('oss-console').scrollIntoView({behavior:'smooth'})">START
+              MISSION</button>
+            <button class="btn-secondary"
+              onclick="document.getElementById('gadgets').scrollIntoView({behavior:'smooth'})">VIEW GADGETS</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="gadgets" class="reveal">
+        <div class="section-title">
+          <span>01</span>
+          <h3>THE GADGET BAY</h3>
+        </div>
+        <div class="feature-grid">
+          <div class="glass-card feature-card">
+            <span class="feat-icon">👟</span>
+            <h4>FLIGHT KICKS</h4>
+            <p>Antigravity propulsion. Defy physics at 2000+ particles per second.</p>
+          </div>
+          <div class="glass-card feature-card">
+            <span class="feat-icon">📺</span>
+            <h4>HOLO-WATCH</h4>
+            <p>Dual-Layer display for cinematic lore decryption and mission stats.</p>
+          </div>
+          <div class="glass-card feature-card">
+            <span class="feat-icon">🕶️</span>
+            <h4>SENTINEL VISOR</h4>
+            <p>100% hallucination interception. See the truth behind the code.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="oss-console" class="reveal">
+        <div class="section-title">
+          <span>02</span>
+          <h3>OSS COMMAND CENTER</h3>
+        </div>
+        <div class="dashboard-grid">
+          <!-- Sentinel Diagnostic Hub -->
+          <div class="glass-card sentinel-dash" id="sentinel-hub">
+            <div class="sentinel-header">
+              <h3>🛡️ Sentinel Diagnostic Hub</h3>
+              <span id="sentinel-status" class="status-indicator">STANDBY</span>
+            </div>
+
+            <div class="logic-gates">
+              <div class="gate" id="gate-semantic">
+                <span class="gate-label">Semantic Signature Matching</span>
+                <div class="gate-lights">
+                  <span class="light"></span><span class="light"></span><span class="light"></span>
+                </div>
+              </div>
+              <div class="gate" id="gate-hallucination">
+                <span class="gate-label">Hallucination Interception</span>
+                <div class="gate-lights">
+                  <span class="light"></span><span class="light"></span><span class="light"></span>
+                </div>
+              </div>
+              <div class="gate" id="gate-fallback">
+                <span class="gate-label">Cinematic Fallback Readiness</span>
+                <div class="gate-lights">
+                  <span class="light"></span><span class="light"></span><span class="light"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sentinel-telemetry">
+              <pre id="sentinel-log">// Sentinel 2.0: Guardrail ONLINE
+// Waiting for AI Director signal...</pre>
+            </div>
+          </div>
+
+          <!-- Agent Console -->
+          <div class="glass-card agent-console">
+            <div class="console-header">
+              <span>>_ AGENT INPUT</span>
+            </div>
+            <div id="console-output">
+              <p class="holographic">🔓 ACCESS GRANTED: OSS SECURE LINE ESTABLISHED.</p>
+              <p class="holographic">🚀 MOTIONFRAME ENGINE: ONLINE [v3.3 OBSIDIAN]</p>
+            </div>
+            <div class="console-input">
+              <span class="prompt">🕵️ AGENT ></span>
+              <input type="text" placeholder="Enter vision prompt..." id="web-agent-input">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="training-sim" class="reveal">
+        <div class="section-title">
+          <span>03</span>
+          <h3>DANGER ROOM: AGENT SIM</h3>
+        </div>
+        <div class="glass-card physics-container">
+          <div class="physics-info">
+            <h4>Agent Training: V1</h4>
+            <p>Test your ocular response with the OSS Digital Twin physics rebound. Stabilize the particles to maintain
+              mission integrity.</p>
+            <div class="physics-stats">
+              <div class="stat-pill"><span id="physics-score">0</span> STRIKES</div>
+              <div class="stat-pill"><span id="physics-velocity">0</span> px/s</div>
+            </div>
+          </div>
+          <div class="physics-canvas-wrapper">
+            <canvas id="physics-canvas"></canvas>
+            <div class="canvas-overlay">CLICK TO INITIATE SEQUENCE</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lore-archive" class="reveal">
+        <div class="glass-card lore-card">
+          <div class="card-header">
+            <h3>📜 THE MOTIONFRAME MANIFESTO</h3>
+            <button id="decrypt-lore" class="btn-sm">DECRYPT ARCHIVE</button>
+          </div>
+          <div id="lore-content" class="lore-text">
+            // Archive Encrypted. Access Authorizing...
+          </div>
+        </div>
+      </section>
+
+      <section id="join" class="reveal">
+        <div class="glass-card join-card">
+          <h3>Join the Cinematic Strike Team</h3>
+          <p>We are building a legacy. A cinematic strike team in a repository, ready to put a dent in the universe.</p>
+          <div class="join-input">
+            <input type="email" placeholder="agent@visionary.com">
+            <button class="btn-primary">SECURE ACCESS</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">💠</span>
+          <span>MOTIONFRAME</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">Github</a>
+          <a href="#">Documentation</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <p>© 2026 Duvall & Antigravity | MIT Masterpiece</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

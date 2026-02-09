@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+*.egg-info/
+
+# Web
+node_modules/
+website/node_modules/
+website/dist/
+.DS_Store
+
+# Brain/Artifacts (Internal)
+.gemini/
+/Users/duvall.ai/.gemini/

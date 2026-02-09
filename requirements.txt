@@ -1,0 +1,14 @@
+numpy
+pandas
+torch
+python-dotenv
+transformers
+accelerate
+fastapi
+uvicorn
+websockets
+python-multipart
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+requests

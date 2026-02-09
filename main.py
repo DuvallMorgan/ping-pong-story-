@@ -1,37 +1,45 @@
-cat <<EOF > main.py
 import os
 import sys
+import time
 
-def handle_spy_kids_logic(user_input):
+def jensen_print(text):
+    """NVIDIA-green terminal output."""
+    print(f"\033[1;32m[ACCELERATED]\033[0m {text}")
+
+def compute_logic(user_input):
     if "->" in user_input:
-        parts = [p.strip() for p in user_input.split("->")]
-        if len(parts) < 3:
-            print("🚨 ERROR: Command must follow the pattern: /command -> 'Prompt' -> Action")
-            return
+        pipeline = [p.strip() for p in user_input.split("->")]
+        
+        if len(pipeline) >= 3:
+            asset = pipeline[1]
+            env = pipeline[2]
             
-        command, prompt, action = parts[0], parts[1], parts[2]
-
-        if command == "/tactical":
-            print(f"\n🎯 [STRIKE TEAM ACTIVATED]: Rendering {prompt}...")
-        elif command == "/artist":
-            print(f"\n🎨 [AESTHETIC MODE]: Visualizing {prompt}...")
-
-        if "Deploy Render" in action:
-            print("🚀 SENDING TO IMAGE ENGINE... DONE.\n")
+            jensen_print(f"Instantiating Digital Twin: '{asset}'")
+            time.sleep(0.4)
+            jensen_print(f"Applying Omniverse Physics: '{env}'")
+            
+            if "Deploy Render" in user_input:
+                print("🚀 [GPU CLUSTER]: Searing pixels... Render Complete.")
+        else:
+            jensen_print("⚠️ Pipeline incomplete. Needs: /cook -> Asset -> Physics")
     else:
-        print(f"🕵️ Standby... Echoing raw signal: {user_input}")
+        jensen_print(f"Echoing Raw Signal: {user_input}")
 
 def main():
-    print("🚀 PING-PONG-STORY ENGINE ONLINE")
+    os.system('clear')
+    print("\033[1;32m🟢 OSS MOTIONFRAME | AGENT ATELIER\033[0m")
+    print("Accelerating Generative Storytelling [SPY KIDS PROTOCOL]")
+    print("-" * 40)
     while True:
         try:
-            cmd = input("🕵️  AGENT INPUT > ").strip()
-            if cmd.lower() in ["exit", "quit"]:
+            directive = input("\033[1;34m🕵️ AGENT >\033[0m ").strip()
+            if directive.lower() in ["exit", "quit"]:
                 break
-            handle_spy_kids_logic(cmd)
-        except EOFError:
+            if not directive:
+                continue
+            compute_logic(directive)
+        except (EOFError, KeyboardInterrupt):
             break
 
 if __name__ == "__main__":
     main()
-EOF

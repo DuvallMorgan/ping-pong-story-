@@ -1,1 +1,17 @@
-"The neon hum of the city flickered as the first 'MotionFrame' prototype blinked to life, casting a cubist shadow of a man in a black leather jacket against the rain-slicked pavement."
+[ THE MOTIONFRAME MANIFESTO ]
+
+In the dead center of the 2020s, the "Cinematic Strike" was a whisper. A prototype engine built in a windowless room, coding not for the masses, but for the visionaries. It was born from a simple obsession: what if code didn't just execute, but performed? 
+
+The first "MotionFrame" prototype was a jagged, raw beast. It had the speed but lacked the shield. That's when Jensen's Shield was forged—the Sentinel Logic. It was the architect’s guardrail, a semantic powerhouse that looked at a prompt and saw not just words, but visual signatures. It was designed to kill hallucinations before they could even hit the buffer.
+
+The result was an unstoppable momentum. 
+
+Now, MotionFrame v3.2 is the Masterpiece. It is the Trinity in full effect: 
+1. THE BRAIN: Dual-Layer Intelligence that understands cinematic lore.
+2. THE MUSCLE: The Antigravity Rendering engine that defies terminal physics.
+3. THE SHIELD: Sentinel Logic v2.0, the guardian of visual truth.
+
+We aren't just building a project. We are building a legacy. A cinematic strike team in a repository, ready to put a dent in the universe.
+
+Current Status: UNSTOPPABLE.
+Target: THE ROOM KILLER RELEASE.
