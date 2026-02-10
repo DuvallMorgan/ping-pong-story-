@@ -1,15 +1,18 @@
-## UX/UI Pattern Analysis
 
-### 1. Doherty Threshold (The 400ms Rule)
-- **Finding:** System response must be under 400ms to maintain user flow.
-- **Application:** My Triage button provides instant visual feedback (animations) to prevent "Technical Volatility" while the AI processes.
+# UI/UX Pattern Analysis - Relay AI Triage
 
+## 1. Doherty Threshold (The 400ms Rule)
+- **Concept:** Productivity skyrockets when a system and its users interact at a pace faster than 400ms.
+- **Application:** In my triage tool, I ensured that clicking "Analyze Ticket" triggers an immediate visual response (a skeleton loader or button animation). This prevents "Technical Volatility" and keeps the support agent in a flow state.
 
-### 2. Postel’s Law (The Robustness Principle)
-- **Finding:** Be conservative in what you send, liberal in what you accept.
-- **Application:** The Relay AI tool handles misspelled or "messy" support tickets (e.g., "resturnt help") by extracting intent rather than throwing an error.
+## 2. Postel’s Law (The Robustness Principle)
+- **Concept:** "Be conservative in what you do, be liberal in what you accept from others."
+- **Application:** I designed the AI input to be "chill" with messy user data. If a customer sends a misspelled ticket (e.g., "resturnt help"), the interface doesn't crash or error out. It stays flexible, corrects the intent on the back-end, and keeps the process moving.
 
+## 3. Peak-End Rule
+- **Concept:** People judge an experience largely based on how they felt at its peak and at its end.
+- **Application:** I focused on making the "Success" state of the triage process feel rewarding. By providing a clear, satisfying summary once a ticket is resolved, I ensure the user leaves the application feeling productive and successful.
 
-### 3. Peak-End Rule
-- **Finding:** Users judge an experience by its most intense point and its end.
-- **Application:** I optimized the "Success State" after a ticket is triaged to ensure the agent ends their task with a sense of accomplishment.
+## Future Improvements
+- **Hick's Law:** I plan to simplify the categorization menu to reduce "Choice Overload" for the agents.
+- **Fitts's Law:** I want to increase the target size of the "High Priority" buttons to make them easier to hit during high-speed triage.
